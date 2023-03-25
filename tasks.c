@@ -4275,7 +4275,7 @@ void vTaskMissedYield( void )
  */
 
 #if ( configNUM_CORES > 1 )
-    static void __no_inline_not_in_flash_func(prvMinimalIdleTask)(void* pvParameters)
+    static portTASK_FUNCTION( prvMinimalIdleTask, pvParameters )
     {
         taskYIELD();
 

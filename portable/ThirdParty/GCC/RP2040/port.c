@@ -355,7 +355,7 @@ void vPortEndScheduler( void )
 }
 /*-----------------------------------------------------------*/
 
-void __no_inline_not_in_flash_func(vPortYield)(void)
+void vPortYield( void )
 {
     #if ( configSUPPORT_PICO_SYNC_INTEROP == 1 )
         /* We are not in an ISR, and pxYieldSpinLock is always dealt with and
